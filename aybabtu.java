@@ -3,7 +3,7 @@ public class aybabtu {
 
         
             public static void taytto(String s, int n) {
-                //tehdään erillinen taulukko, jossa oikea määrä 
+                
                 char[][] twoD = new char[n][n];
                 int m = s.length();
                 int k = 0;
