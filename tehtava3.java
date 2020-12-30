@@ -29,13 +29,10 @@ public class tehtava3 {
                 numero++; 
             }
         }
-        
-    //return laskuri;
-        }
-        
-        
+    }
+
     
     public static void main(String[] args) {
-       System.out.print(koskaLoppuu(5));
+       System.out.print(koskaLoppuu(99998));
     }
 }
