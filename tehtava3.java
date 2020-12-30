@@ -1,43 +1,17 @@
-import java.util.HashMap;
-
 public class tehtava3 {
 
 
-    public static void koskaLoppuu(int n) {
+    private static Integer koskaLoppuu(int n) {
         
-    //n = kuinka monta numeroa käytössä
-    //jos n = 2; 1 --> 2 --> 3 --> 10 on viimeinen
+        //koitetaan koodata lyhyempi ratkaisu, jossa lähdetään siitä, että 1 täyttyy numeroista ensimmäisenä joka tapauksessa (lukuun ottamatta rajatapasta, jossa 0)
 
-    //for (int i = 0; i < n; i++) {
+        int laskuri = 0;
 
-        HashMap<Integer, Integer> yllapito = new HashMap<>();
-
-        int luku = 0;
-
-        while (true) {
-
-
-            if (!yllapito.containsKey(luku)) {
-                yllapito.put(luku, 1);
-            }
-            else {
-                int tarkistettava = yllapito.get(luku);
-                if (tarkistettava+1==n) {
-                    break;
-                }
-                else {
-                yllapito.put(luku, tarkistettava+1);
-                }
-                
-            }
-
-            luku++;
-
+        if (n == 1) {
+            return 0;
         }
 
-        System.out.print(luku);
-
-
+        return 0;
         //Alla koodia, jolla digitit mahdollista erottaa
 
 /* int number; // = and int
@@ -58,6 +32,6 @@ while (!stack.isEmpty()) {
         
     
     public static void main(String[] args) {
-       
+       System.out.print(koskaLoppuu(5));
     }
 }
