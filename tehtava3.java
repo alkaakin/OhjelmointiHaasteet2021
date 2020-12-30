@@ -3,30 +3,34 @@ public class tehtava3 {
 
     private static Integer koskaLoppuu(int n) {
         
-        //koitetaan koodata lyhyempi ratkaisu, jossa lähdetään siitä, että 1 täyttyy numeroista ensimmäisenä joka tapauksessa (lukuun ottamatta rajatapasta, jossa 0)
+        int numero = 0;
+        int laskuri = 0; 
+            if (n == 0) {
+                return null;
+                        }
+            if (n == 1) {
+                return 0;
+                    }
+            
+            while (true) {
+                String pilkottava = String.valueOf(numero);
+                String[] splitti = pilkottava.split("");
+                for (int i = 0; i < splitti.length; i++) {
+                if (splitti[i].equals("1")) {
+                    laskuri++;
+                        }
+                    }
 
-        int laskuri = 0;
-
-        if (n == 1) {
-            return 0;
+            if (laskuri == n) {
+                return numero;
+                
+            }    
+            else {
+                numero++; 
+            }
         }
-
-        return 0;
-        //Alla koodia, jolla digitit mahdollista erottaa
-
-/* int number; // = and int
-LinkedList<Integer> stack = new LinkedList<Integer>();
-while (number > 0) {
-    stack.push( number % 10 );
-    number = number / 10;
-}
-
-while (!stack.isEmpty()) {
-    print(stack.pop());
-}
-   */ 
-    
-    
+        
+    //return laskuri;
         }
         
         
